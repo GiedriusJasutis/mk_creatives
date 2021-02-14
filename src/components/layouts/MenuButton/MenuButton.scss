@@ -1,0 +1,148 @@
+.menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: green;
+  width: 100%;
+
+  // toggler - this is checkbox
+  .toggler {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  // * rotate lines
+  .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  // turn lines into X
+  .toggler:checked + .hamburger > div::before,
+  .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  // When is checked rotated on hover
+  .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  // show menu when toggler checkbox is checked
+  .toggler:checked ~ .menu {
+    visibility: visible;
+
+    div {
+      transform: scale(1);
+      transition-duration: 1s;
+
+      div {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+      }
+    }
+  }
+
+  // hamburger - empty div
+  .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 50px;
+    width: 60px;
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 75%;
+
+    // Hamburger lines
+
+    div {
+      position: relative;
+      width: 100%;
+      background-color: #333;
+      height: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+
+      // Top and bottom lines
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+      }
+
+      // moves one line down
+      &::after {
+        top: 10px;
+      }
+    }
+  }
+
+  // menu navigation
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    div {
+      background-color: #333;
+      border-radius: 0%;
+      width: 200vw;
+      height: 200vw;
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: all 0.4s ease;
+      opacity: 0.9;
+
+      // second div
+      div {
+        text-align: center;
+        max-width: 200vw;
+        max-height: 200vw;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+
+        // style list items
+        ul {
+          li {
+            list-style: none;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 1rem;
+            a {
+              color: inherit;
+              text-decoration: none;
+              transition: color 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
