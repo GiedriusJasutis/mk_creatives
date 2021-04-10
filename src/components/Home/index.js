@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import SectionOne from './SectionOne';
 import SectionTwo from './SectionTwo';
-import MenuButton from '../layouts/MenuButton/MenuButton';
 import gsap from 'gsap';
 
 import Navigation from '../layouts/Navigation';
@@ -12,11 +11,8 @@ function HomePage() {
   });
   return (
     <div className='scroll-container homePageAnimation'>
-      <div className='hidden md:block '>
+      <div className=''>
         <Navigation navigationTextColor='text-black' />
-      </div>
-      <div className='md:block md:hidden'>
-        <MenuButton />
       </div>
       <SectionOne />
       <SectionTwo />

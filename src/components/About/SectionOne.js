@@ -5,8 +5,8 @@ function SectionOne() {
   useEffect(() => {
     gsap.from('.firstSectionImageAnimation', {
       opacity: 0,
-      duration: 1.5,
-      y: -50,
+      duration: 0.5,
+      y: 0,
     });
 
     gsap.from('.aboutTitleSectionOneAnimation', {
@@ -15,20 +15,15 @@ function SectionOne() {
     });
 
     gsap.from('.firstTextAnimation', {
-      duration: 1.5,
+      duration: 1,
       x: -1000,
-    });
-
-    gsap.from('.howDoWeDoWhatWeDo', {
-      duration: 1.5,
-      x: 1000,
     });
   });
   return (
     <section className='text-gray-900 firstSectionAnimation'>
       <div className='aboutTitleSectionOneAnimation relative flex flex-col lg:flex-row lg:h-full '>
         {/* TITLE */}
-        <h1 className=' px-5 absolute z-10 w-full text-center pt-10 lg:pt-20 text-xl lg:text-4xl text-orange-500 font-bold'>
+        <h1 className=' px-5 absolute z-10 w-full text-center pt-10 lg:pt-20 text-xl lg:text-4xl text-orange-500 font-bold mt-10 lg:mt-2'>
           PUSHING THE BOUNDARIES OF ART & VISUAL COMMUNICATION
         </h1>
         {/* TWO COLUMNS STARTS IMAGE LEFT , TEXT RIGHT*/}
@@ -50,9 +45,9 @@ function SectionOne() {
               digital visual assets.
             </div>
             {/* Flex 2 */}
-            <div className='howDoWeDoWhatWeDo flex flex-col lg:flex-row py-5 lg:p-10'>
+            <div className=' flex flex-col lg:flex-row py-5 lg:p-10'>
               <div className='py-3 m-3'>
-                <h1 className='text-2xl lg:text-2xl'>
+                <h1 className='howDoWeDoWhatWeDo text-2xl lg:text-2xl'>
                   HOW DO WE DO WHAT WE DO
                 </h1>
                 First, we talk about you. Your ideas. Your dreams. You
@@ -62,7 +57,7 @@ function SectionOne() {
                 explored. Collaboration is key. Coffe is a must.
               </div>
               <div className='py-3 m-3'>
-                <h1 className='text-2xl lg:text-2xl'>
+                <h1 className='howDoWeDoWhatWeDo text-2xl lg:text-2xl'>
                   OUR PASSION, YOUR PURPOSE
                 </h1>
                 We love nothing more than collaborating with agencies,

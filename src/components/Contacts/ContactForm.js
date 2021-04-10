@@ -4,7 +4,7 @@ import gsap from 'gsap';
 
 function ContactForm() {
   useEffect(() => {
-    gsap.from('.contactForm', { opacity: 0, duration: 1, delay: 0.3 });
+    gsap.from('.contactForm', { opacity: 0, duration: 0.4, delay: 0.3 });
     gsap.from('.formMessageTitle', {
       opacity: 0,
       duration: 0.5,

@@ -6,7 +6,7 @@ import gsap from 'gsap';
 
 function SectionOne() {
   useEffect(() => {
-    gsap.from('section', { opacity: 0, duration: 1, x: -30 });
+    gsap.from('section', { opacity: 0, duration: 0.3, x: -30 });
   });
   return (
     <section className='pt-12 lg:pt-32 animeContacts'>

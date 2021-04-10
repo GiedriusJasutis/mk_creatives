@@ -4,12 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 
 function SectionThree() {
   return (
-    <section>
-      {/* <div className='pt-48 px-32 text-orange-500 font-bold text-4xl'>
-        <h1 className='my-5'>Company logos</h1>
-        <h1 className='my-5'>Testimotionals</h1>
-      </div> */}
-      <Carousel>
+    <section className='flex justify-center items-center overflow-hidden'>
+      <Carousel className='w-9/12 lg:w-1/2'>
         <div>
           <img
             src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'

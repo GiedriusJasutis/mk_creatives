@@ -1,11 +1,11 @@
 import React from 'react';
-import MenuButton from '../layouts/MenuButton/MenuButton';
 import SectionOne from './SectionOne';
+import Navigation from '../layouts/Navigation';
 
 function ContactsPage() {
   return (
     <>
-      <MenuButton />
+      <Navigation />
       <SectionOne />
     </>
   );
