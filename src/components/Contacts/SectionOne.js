@@ -12,7 +12,7 @@ function SectionOne() {
     <section className='pt-12 lg:pt-32 animeContacts'>
       <div className='h-screen'>
         <h1 className='w-full text-center pt-3 text-xl'>Contact Us</h1>
-        <div className='flex flex-col lg:flex-row w-full md:pt-20'>
+        <div className='flex flex-col lg:flex-row w-full md:pt-20 container mx-auto'>
           <ContactData />
           <ContactForm />
         </div>

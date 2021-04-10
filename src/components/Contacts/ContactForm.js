@@ -23,7 +23,7 @@ function ContactForm() {
           <label className='block mb-2 text-gray-700 text-sm'>Your name</label>
           <input
             type='text'
-            className=' shadow-appearance-none border rounded w-full py-2 px-3 text-gray-700'
+            className='border border-2 border-gray-300 w-full rounded-lg'
           />
         </div>
 
@@ -32,7 +32,7 @@ function ContactForm() {
           <label className='block mb-2 text-gray-700 text-sm'>Email</label>
           <input
             type='text'
-            className=' shadow-appearance-none border rounded w-full py-2 px-3 text-gray-700'
+            className='border border-2 border-gray-300 w-full rounded-lg'
           />
         </div>
 
@@ -44,7 +44,7 @@ function ContactForm() {
 
           <textarea
             type='text'
-            className=' shadow-appearance-none border rounded w-full py-2 px-3 text-gray-700'
+            className='border border-2 border-gray-300 w-full rounded-lg'
           ></textarea>
         </div>
 
